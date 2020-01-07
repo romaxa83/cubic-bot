@@ -1,34 +1,15 @@
-<nav>
-    <div class="nav-wrapper">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <!--пользователь авторизован-->
-            {{#if isAuth}}
-                {{#if isAdd}}
-                    <li class="active"><a href="/add">Add</a></li>
-                {{else}}
-                    <li><a href="/add">Add</a></li>
-                {{/if}}
-
-                {{#if isCart}}
-                    <li class="active"><a href="/cart">Cart</a></li>
-                {{else}}
-                    <li><a href="/cart">Cart</a></li>
-                {{/if}}
-
-                {{#if isOrder}}
-                    <li class="active"><a href="/orders">Order</a></li>
-                {{else}}
-                    <li><a href="/orders">Order</a></li>
-                {{/if}}
-
-                {{#if isProfile}}
-                    <li class="active"><a href="/profile">Profile</a></li>
-                {{else}}
-                    <li><a href="/profile">Profile</a></li>
-                {{/if}}
-
-                <li><a href="/auth/logout">Logout</a></li>
-            {{/if}}
-        </ul>
-    </div>
-</nav>
+{{#if isAuth}}
+    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Cubic-bot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/auth/logout">Logout<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+{{/if}}
